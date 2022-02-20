@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 2c17282fa2b02f94c9925e9588d6f049
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -490087019247727121
+    second: aim_rail_tan
+  - first:
+      213: -7333475163487919036
+    second: aim_rail_black
+  - first:
+      213: 2576494417840500926
+    second: body_tan
+  - first:
+      213: -8390428878039816450
+    second: body_black
+  - first:
+      213: -2302360622102962866
+    second: laser_grey
+  - first:
+      213: -3062330866224443222
+    second: handgrip_grey
+  - first:
+      213: 1052033248706232103
+    second: mag_tan
+  - first:
+      213: 6139095562253404120
+    second: mag_black
+  - first:
+      213: 8205812251252740443
+    second: silencer_black
+  - first:
+      213: 7824418335155011306
+    second: silencer_tan
+  - first:
+      213: 8305233381391690839
+    second: grip_tan
+  - first:
+      213: -4701815217351832889
+    second: grip_black
+  - first:
+      213: -3874186261844833754
+    second: stock_tan
+  - first:
+      213: -1813513726736743527
+    second: reflex_aim_1
+  - first:
+      213: -7728969288234883849
+    second: handgrip_tan
+  - first:
+      213: 6934570266166679419
+    second: handgrip_black
+  - first:
+      213: 1371604226996307106
+    second: stock_black
+  - first:
+      213: 2793762997160224761
+    second: laser_tan
+  - first:
+      213: -8336927057369532267
+    second: barrel_normal
+  - first:
+      213: 8515043511056422381
+    second: barrel_short
+  - first:
+      213: 6712054349785638492
+    second: barrel_lomg
+  - first:
+      213: 8937949692186959432
+    second: barrel_long_2
+  - first:
+      213: -886631278584350266
+    second: barrel_long_3
+  - first:
+      213: 4713339325553932259
+    second: reflex_aim_2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: aim_rail_tan
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 39
+        width: 6
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed85bcd37cd239f0800000000000000
+      internalID: -490087019247727121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aim_rail_black
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 36
+        width: 6
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444272771334a3a90800000000000000
+      internalID: -7333475163487919036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: body_tan
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 29
+        width: 11
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0f82da50c81c320800000000000000
+      internalID: 2576494417840500926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: body_black
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 22
+        width: 11
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6e14bc3653f8b80800000000000000
+      internalID: -8390428878039816450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_grey
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 20
+        width: 3
+        height: 1
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d94be663f5c00e0800000000000000
+      internalID: -2302360622102962866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handgrip_grey
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 17
+        width: 1
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa05af55d4a6085d0800000000000000
+      internalID: -3062330866224443222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mag_tan
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 10
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ff8017aa2999e00800000000000000
+      internalID: 1052033248706232103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mag_black
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 10
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d78a4633e2723550800000000000000
+      internalID: 6139095562253404120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silencer_black
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 13
+        width: 5
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51d77924c6e0e170800000000000000
+      internalID: 8205812251252740443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silencer_tan
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 10
+        width: 5
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeeb7f0350be59c60800000000000000
+      internalID: 7824418335155011306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grip_tan
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 10
+        width: 3
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c6192e1cd124370800000000000000
+      internalID: 8305233381391690839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grip_black
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 14
+        width: 3
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cac73a98fbcfbeb0800000000000000
+      internalID: -4701815217351832889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock_tan
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 10
+        width: 7
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a4a050f102c3ac0800000000000000
+      internalID: -3874186261844833754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reflex_aim_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 13
+        width: 3
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993cf8abfda15d6e0800000000000000
+      internalID: -1813513726736743527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handgrip_tan
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 10
+        width: 1
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f42bd6d16f2db490800000000000000
+      internalID: -7728969288234883849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handgrip_black
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 10
+        width: 1
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77d9d88aea8c3060800000000000000
+      internalID: 6934570266166679419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock_black
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 16
+        width: 7
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a40a8207cae80310800000000000000
+      internalID: 1371604226996307106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser_tan
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 19
+        width: 3
+        height: 1
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7ad58d4a075c620800000000000000
+      internalID: 2793762997160224761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrel_normal
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 22
+        width: 10
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598752323094d4c80800000000000000
+      internalID: -8336927057369532267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrel_short
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 26
+        width: 8
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5538b65f28b2670800000000000000
+      internalID: 8515043511056422381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrel_lomg
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 12
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56a6108ed1062d50800000000000000
+      internalID: 6712054349785638492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrel_long_2
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 34
+        width: 13
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e9d17c3e9f90c70800000000000000
+      internalID: 8937949692186959432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barrel_long_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 38
+        width: 13
+        height: 3
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9ba39bc8d02b3f0800000000000000
+      internalID: -886631278584350266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reflex_aim_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 16
+        width: 3
+        height: 2
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7758de425296140800000000000000
+      internalID: 4713339325553932259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
