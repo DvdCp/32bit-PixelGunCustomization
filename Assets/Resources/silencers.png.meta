@@ -161,7 +161,7 @@ TextureImporter:
         y: 30
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -182,7 +182,7 @@ TextureImporter:
         y: 27
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -203,7 +203,7 @@ TextureImporter:
         y: 24
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -224,7 +224,7 @@ TextureImporter:
         y: 21
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -245,7 +245,7 @@ TextureImporter:
         y: 18
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -266,7 +266,7 @@ TextureImporter:
         y: 15
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -287,7 +287,7 @@ TextureImporter:
         y: 12
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -308,7 +308,7 @@ TextureImporter:
         y: 9
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -329,7 +329,7 @@ TextureImporter:
         y: 6
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -350,7 +350,7 @@ TextureImporter:
         y: 3
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -371,7 +371,7 @@ TextureImporter:
         y: 0
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -392,7 +392,7 @@ TextureImporter:
         y: 0
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -413,7 +413,7 @@ TextureImporter:
         y: 3
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -434,7 +434,7 @@ TextureImporter:
         y: 6
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -455,7 +455,7 @@ TextureImporter:
         y: 9
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -476,7 +476,7 @@ TextureImporter:
         y: 12
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -497,7 +497,7 @@ TextureImporter:
         y: 15
         width: 5
         height: 2
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -518,7 +518,7 @@ TextureImporter:
         y: 18
         width: 5
         height: 1
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -539,7 +539,7 @@ TextureImporter:
         y: 24
         width: 5
         height: 1
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -560,7 +560,7 @@ TextureImporter:
         y: 21
         width: 5
         height: 1
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -581,7 +581,7 @@ TextureImporter:
         y: 27
         width: 5
         height: 1
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
