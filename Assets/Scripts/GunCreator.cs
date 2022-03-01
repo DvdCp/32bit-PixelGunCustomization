@@ -11,6 +11,8 @@ public class GunCreator : MonoBehaviour
     private Sprite[] _grips;
     private Sprite[] _mags;
     private Sprite[] _muzzles;
+    private Sprite[] _aims;
+    private Sprite[] _handgrips;
 
     public SpriteRenderer body;
     public SpriteRenderer stock;
@@ -18,6 +20,8 @@ public class GunCreator : MonoBehaviour
     public SpriteRenderer grip;
     public SpriteRenderer mag;
     public SpriteRenderer muzzle;
+    public SpriteRenderer aim;
+    public SpriteRenderer handgrip;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,8 @@ public class GunCreator : MonoBehaviour
         _grips = Resources.LoadAll<Sprite>("grips");
         _mags = Resources.LoadAll<Sprite>("mags");
         _muzzles = Resources.LoadAll<Sprite>("silencers");
+        _aims = Resources.LoadAll<Sprite>("reflexs");
+        _handgrips = Resources.LoadAll<Sprite>("handgrips");
     }
 
     // Update is called once per frame
@@ -41,9 +47,26 @@ public class GunCreator : MonoBehaviour
             barrel.sprite = _barrels[Random.Range(0,_barrels.Length)];
             grip.sprite = _grips[Random.Range(0,_grips.Length)];
             mag.sprite = _mags[Random.Range(0,_mags.Length)];
-            muzzle.sprite = _muzzles[Random.Range(0,_muzzles.Length)];
-            updateVisual();
+            
+            // Accessories that could be not equipped on gun
+            int randomMuzzle = Random.Range(0, _muzzles.Length + 1);
+            if(randomMuzzle == _muzzles.Length)
+                muzzle.sprite = null;
+            else
+                muzzle.sprite = _muzzles[randomMuzzle];
 
+            int randomAim = Random.Range(0, _aims.Length + 1);
+            if(randomAim  == _aims.Length)
+                aim.sprite = null;
+            else
+                aim.sprite = _aims[randomAim];
+
+            int randomHandgrip = Random.Range(0, _handgrips.Length + 1);
+            if(randomHandgrip  == _handgrips.Length)
+                handgrip.sprite = null;
+            else
+                handgrip.sprite = _handgrips[randomHandgrip];
+            updateVisual();
         }
 
     }
@@ -51,15 +74,18 @@ public class GunCreator : MonoBehaviour
     private void updateVisual()
     {
         Destroy(barrel.gameObject.GetComponent<BoxCollider2D>());
-        BoxCollider2D collider = barrel.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
+        BoxCollider2D barrelCollider = barrel.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
+        var barrelBox = barrelCollider.size;
+        var barrelCenter = barrelCollider.bounds.center;
 
-        var coords = collider.size;
-        var barrelCenter = collider.bounds.center;
-        Debug.Log("barrel collider size = "+coords);
-        muzzle.transform.position = new Vector3(barrelCenter.x + coords.x / 2, 0f, 0f);
+        Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
+        BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
+        var muzzleBox = muzzleCollider.size;
 
+        var deltaHeigth = barrelBox.y - muzzleBox.y;
 
-
+        muzzle.transform.localPosition = new Vector3(barrelBox.x, 0f, 0f);
+        // muzzle.transform.position.x = barrelCenter.x + coords.x / 2;
     }
 
 }

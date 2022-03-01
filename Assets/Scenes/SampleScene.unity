@@ -135,24 +135,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1229599919893878906, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
+      propertyPath: aim
+      value: 
+      objectReference: {fileID: 426889520}
+    - target: {fileID: 1229599919893878906, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: muzzle
       value: 
       objectReference: {fileID: 942972944}
+    - target: {fileID: 1229599919893878906, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
+      propertyPath: handgrip
+      value: 
+      objectReference: {fileID: 1239117151}
     - target: {fileID: 3413464565737953454, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3413464565737953454, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.012683749
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3413464565737953454, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.021617673
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3413464565737953454, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.43833858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3413464565737953454, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -357,6 +365,11 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!212 &426889520 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9005051809980330347, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
+  m_PrefabInstance: {fileID: 12311252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +406,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1792453, g: 0.16788249, b: 0.15979888, a: 0}
+  m_BackGroundColor: {r: 0.254717, g: 0.21506765, b: 0.21651627, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -443,6 +456,11 @@ Transform:
 --- !u!212 &942972944 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 515811712075999652, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
+  m_PrefabInstance: {fileID: 12311252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1239117151 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8503167426587954638, guid: 0de1e880b25dc294198ff38efee8324e, type: 3}
   m_PrefabInstance: {fileID: 12311252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801414591
