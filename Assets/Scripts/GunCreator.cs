@@ -66,7 +66,9 @@ public class GunCreator : MonoBehaviour
                 handgrip.sprite = null;
             else
                 handgrip.sprite = _handgrips[randomHandgrip];
+            
             updateVisual();
+
         }
 
     }
