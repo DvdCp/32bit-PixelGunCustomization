@@ -73,6 +73,37 @@ public class GunCreator : MonoBehaviour
 
     }
 
+        public void keyPressed()
+    {   
+        body.sprite = _bodies[Random.Range(0,_bodies.Length)];
+        stock.sprite = _stocks[Random.Range(0,_stocks.Length)];
+        barrel.sprite = _barrels[Random.Range(0,_barrels.Length)];
+        grip.sprite = _grips[Random.Range(0,_grips.Length)];
+        mag.sprite = _mags[Random.Range(0,_mags.Length)];
+        
+        // Accessories that could be not equipped on gun
+        int randomMuzzle = Random.Range(0, _muzzles.Length + 1);
+        if(randomMuzzle == _muzzles.Length)
+            muzzle.sprite = null;
+        else
+            muzzle.sprite = _muzzles[randomMuzzle];
+
+        int randomAim = Random.Range(0, _aims.Length + 1);
+        if(randomAim  == _aims.Length)
+            aim.sprite = null;
+        else
+            aim.sprite = _aims[randomAim];
+
+        int randomHandgrip = Random.Range(0, _handgrips.Length + 1);
+        if(randomHandgrip  == _handgrips.Length)
+            handgrip.sprite = null;
+        else
+            handgrip.sprite = _handgrips[randomHandgrip];
+        
+        updateVisual();
+
+    }
+
     private void updateVisual()
     {
         Destroy(barrel.gameObject.GetComponent<BoxCollider2D>());
