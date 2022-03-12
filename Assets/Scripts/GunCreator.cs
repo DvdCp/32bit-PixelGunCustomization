@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,6 +20,7 @@ public class GunCreator : MonoBehaviour
     public SpriteRenderer muzzle;
     public SpriteRenderer aim;
     public SpriteRenderer handgrip;
+    public Transform firePoint;
 
     // Start is called before the first frame update
     void Start()
@@ -84,9 +83,12 @@ public class GunCreator : MonoBehaviour
 
         Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
         BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
-        var muzzleBox = muzzleCollider.size;
         muzzle.transform.localPosition = new Vector3(barrelBox.x, 0f, 0f);
         // muzzle.transform.position.x = barrelCenter.x + coords.x / 2;
+
+        // Updating firePoint position
+        var muzzleBox = muzzleCollider.size;
+        firePoint.localPosition = new Vector3(muzzleBox.x, muzzleBox.y / 2, 0f);
     }
 
 }
