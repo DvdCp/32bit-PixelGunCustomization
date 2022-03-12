@@ -41,39 +41,10 @@ public class GunCreator : MonoBehaviour
     public void keyPressed(InputAction.CallbackContext context)
     {   
         if(context.started)
-        {
-            body.sprite = _bodies[Random.Range(0,_bodies.Length)];
-            stock.sprite = _stocks[Random.Range(0,_stocks.Length)];
-            barrel.sprite = _barrels[Random.Range(0,_barrels.Length)];
-            grip.sprite = _grips[Random.Range(0,_grips.Length)];
-            mag.sprite = _mags[Random.Range(0,_mags.Length)];
-            
-            // Accessories that could be not equipped on gun
-            int randomMuzzle = Random.Range(0, _muzzles.Length + 1);
-            if(randomMuzzle == _muzzles.Length)
-                muzzle.sprite = null;
-            else
-                muzzle.sprite = _muzzles[randomMuzzle];
-
-            int randomAim = Random.Range(0, _aims.Length + 1);
-            if(randomAim  == _aims.Length)
-                aim.sprite = null;
-            else
-                aim.sprite = _aims[randomAim];
-
-            int randomHandgrip = Random.Range(0, _handgrips.Length + 1);
-            if(randomHandgrip  == _handgrips.Length)
-                handgrip.sprite = null;
-            else
-                handgrip.sprite = _handgrips[randomHandgrip];
-            
-            updateVisual();
-
-        }
-
+            randomSetup();
     }
 
-        public void keyPressed()
+    public void randomSetup()
     {   
         body.sprite = _bodies[Random.Range(0,_bodies.Length)];
         stock.sprite = _stocks[Random.Range(0,_stocks.Length)];
@@ -114,9 +85,6 @@ public class GunCreator : MonoBehaviour
         Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
         BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
         var muzzleBox = muzzleCollider.size;
-
-        var deltaHeigth = barrelBox.y - muzzleBox.y;
-
         muzzle.transform.localPosition = new Vector3(barrelBox.x, 0f, 0f);
         // muzzle.transform.position.x = barrelCenter.x + coords.x / 2;
     }

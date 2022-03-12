@@ -8,7 +8,7 @@ public class ShootingController : MonoBehaviour
     private Animator _anim;
 
     [SerializeField] private GameObject _bullet;
-    [SerializeField] private Transform _firePoint;
+    [SerializeField] private GameObject _firePoint;
 
     private void Start() 
     {
@@ -22,9 +22,9 @@ public class ShootingController : MonoBehaviour
         if(context.performed)
         {
             Debug.Log("R1 pressed");
-             _anim.SetTrigger("fire");
-             Instantiate(_bullet, _firePoint.position, _firePoint.rotation);
-             //_anim.SetBool("isFiring", false);
+            //_anim.SetTrigger("fire");
+            Instantiate(_bullet, _firePoint.transform.position, _firePoint.transform.rotation);
+            //_anim.SetBool("isFiring", false);
         }
 
         if(context.canceled)
