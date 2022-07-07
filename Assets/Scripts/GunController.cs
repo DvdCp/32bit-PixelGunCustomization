@@ -3,16 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GunController : MonoBehaviour
 {
-
     private Vector2 _mousePosition;
-
-    Vector3 startPos;
-
-    void Start()
-    {
-        startPos = transform.position;
-        Debug.Log(startPos);
-    }
 
     public void onMovement(InputAction.CallbackContext context)
     {
@@ -37,9 +28,14 @@ public class GunController : MonoBehaviour
         else
         {
             Vector2 _stickPosition = context.ReadValue<Vector2>();
-
         }
 
+    }
+
+    public void resetPosition()
+    {
+        transform.rotation = Quaternion.identity;
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
 }

@@ -93,6 +93,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -652,6 +653,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      gunone_22: 7436022623638836367
+      gunone_1: -1253666936595742575
+      gunone_2: -1255139740179918579
+      gunone_18: -871226620842405211
+      gunone_9: -2815911026375682451
+      gunone_0: 2223975880767598937
+      gunone_19: 35871762517032122
+      gunone_11: 2188935609108230590
+      gunone_13: 8120579935995067045
+      gunone_6: 955872436637849644
+      gunone_3: -2018340004503732964
+      gunone_14: 2585814963718984518
+      gunone_16: 8240616365319089366
+      gunone_12: -6847064036793534047
+      gunone_20: 6248910399963306688
+      gunone_17: -3530168263136211439
+      gunone_21: -5039815548385780578
+      gunone_7: -2875932254183487144
+      gunone_4: -5122004505046451709
+      gunone_10: 7178465174663832460
+      gunone_15: 3272879520204857360
+      gunone_8: 8610116389960982809
+      gunone_5: -6308496521637613569
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

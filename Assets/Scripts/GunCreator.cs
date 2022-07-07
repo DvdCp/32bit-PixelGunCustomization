@@ -25,20 +25,26 @@ public class GunCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _bodies = Resources.LoadAll<Sprite>("bodies");
-        _stocks = Resources.LoadAll<Sprite>("stocks");
-        _barrels = Resources.LoadAll<Sprite>("barrels");
-        _grips = Resources.LoadAll<Sprite>("grips");
-        _mags = Resources.LoadAll<Sprite>("mags");
-        _muzzles = Resources.LoadAll<Sprite>("silencers");
-        _aims = Resources.LoadAll<Sprite>("reflexs");
-        _handgrips = Resources.LoadAll<Sprite>("handgrips");
+        _bodies =       Resources.LoadAll<Sprite>("bodies");
+        _stocks =       Resources.LoadAll<Sprite>("stocks");
+        _barrels =      Resources.LoadAll<Sprite>("barrels");
+        _grips =        Resources.LoadAll<Sprite>("grips");
+        _mags =         Resources.LoadAll<Sprite>("mags");
+        _muzzles =      Resources.LoadAll<Sprite>("silencers");
+        _aims =         Resources.LoadAll<Sprite>("reflexs");
+        _handgrips =    Resources.LoadAll<Sprite>("handgrips");
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        // In this case Input is used because PlayerController is inactive until game mode is turned off
+        if (Input.GetKeyDown(KeyCode.R))
+            randomSetup();
+    }
 
     public void keyPressed(InputAction.CallbackContext context)
-    {   
+    {
         if(context.started)
             randomSetup();
     }
@@ -79,7 +85,6 @@ public class GunCreator : MonoBehaviour
         Destroy(barrel.gameObject.GetComponent<BoxCollider2D>());
         BoxCollider2D barrelCollider = barrel.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
         var barrelBox = barrelCollider.size;
-        var barrelCenter = barrelCollider.bounds.center;
 
         Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
         BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;

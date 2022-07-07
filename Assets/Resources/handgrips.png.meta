@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -268,6 +269,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      handgrips0000_0: 7806880908304308535
+      handgrips0000_3: 2745602398775511679
+      handgrips0000_2: 5804539199925507136
+      handgrips0000_6: 5358156139683862924
+      handgrips0000_5: -1628582303637421154
+      handgrips0000_1: 3848996405370266608
+      handgrips0000_4: -1181704897171732905
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

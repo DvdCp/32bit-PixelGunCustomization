@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -676,6 +677,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      aim_rail_tan: -490087019247727121
+      handgrip_black: 6934570266166679419
+      laser_grey: -2302360622102962866
+      stock_tan: -3874186261844833754
+      handgrip_grey: -3062330866224443222
+      laser_tan: 2793762997160224761
+      barrel_lomg: 6712054349785638492
+      grip_tan: 8305233381391690839
+      silencer_black: 8205812251252740443
+      silencer_tan: 7824418335155011306
+      barrel_long_2: 8937949692186959432
+      reflex_aim_1: -1813513726736743527
+      mag_black: 6139095562253404120
+      barrel_normal: -8336927057369532267
+      handgrip_tan: -7728969288234883849
+      barrel_short: 8515043511056422381
+      barrel_long_3: -886631278584350266
+      reflex_aim_2: 4713339325553932259
+      stock_black: 1371604226996307106
+      mag_tan: 1052033248706232103
+      aim_rail_black: -7333475163487919036
+      body_tan: 2576494417840500926
+      grip_black: -4701815217351832889
+      body_black: -8390428878039816450
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

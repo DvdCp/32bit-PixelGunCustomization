@@ -87,6 +87,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -604,6 +605,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      silencers_15: 3414153964893415684
+      silencers_2: -2860927003802921000
+      silencers_7: -7808814268171689583
+      silencers_14: -2523734080097974641
+      silencers_8: -7784409814587383784
+      silencers_1: -7116528967137994803
+      silencers_6: -4215637060308800885
+      silencers_16: -1790980437173692380
+      silencers_0: -9023468626476470040
+      silencers_4: 3582562632247538153
+      silencers_10: 3221803282033536090
+      silencers_12: -8583542262064991972
+      silencers_20: 5943526174464744376
+      silencers_18: 6721220562554069248
+      silencers_3: -6702820518960470286
+      silencers_19: 4971317055887783014
+      silencers_13: -3291572703777844206
+      silencers_9: 2676217542833730489
+      silencers_17: 975699152496751256
+      silencers_5: 7113472574527462421
+      silencers_11: -2608759107024441424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

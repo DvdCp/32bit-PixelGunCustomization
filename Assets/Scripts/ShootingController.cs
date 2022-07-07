@@ -21,7 +21,6 @@ public class ShootingController : MonoBehaviour
     {
         if(context.performed)
         {
-            Debug.Log("R1 pressed");
             //_anim.SetTrigger("fire");
             Instantiate(_bullet, _firePoint.transform.position, _firePoint.transform.rotation);
             //_anim.SetBool("isFiring", false);

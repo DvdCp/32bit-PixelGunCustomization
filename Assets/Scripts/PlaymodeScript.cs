@@ -4,12 +4,11 @@ using UnityEngine.InputSystem;
 
 public class PlaymodeScript : MonoBehaviour
 {
-    [SerializeField]
-    private Button _TryGunButton;
-
+    [SerializeField] private Button _TryGunButton;
     [SerializeField] private Button _ExitButton;
     [SerializeField] private GameObject _AccessioriesButtonGroup;
     [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private GunController _gunController;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +40,9 @@ public class PlaymodeScript : MonoBehaviour
         // Disabling "Exit" button (disabling itself)
         _ExitButton.gameObject.SetActive(false);
 
-        _playerInput.enabled = false;        
+        _playerInput.enabled = false;
+
+        print("marona");
+        _gunController.resetPosition();
     }
 }

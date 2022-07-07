@@ -11,7 +11,8 @@
                     "id": "816f7d8f-1e27-4e26-a304-2e0982d6eecd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ChangePart",
@@ -19,7 +20,8 @@
                     "id": "14cabc30-c860-4b59-99cd-50e37adb5853",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Movement",
@@ -27,7 +29,8 @@
                     "id": "c3cd9118-c350-4d91-aada-534bb5da322d",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -56,7 +59,7 @@
                 {
                     "name": "",
                     "id": "04a426de-3bc3-445f-8241-a7823d228036",
-                    "path": "<Keyboard>/#(R)",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
