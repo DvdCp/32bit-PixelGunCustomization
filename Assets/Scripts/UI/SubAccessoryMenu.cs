@@ -31,6 +31,7 @@ public class SubAccessoryMenu : MonoBehaviour
 
             newAccessory.GetComponent<SubAccessoryButton>().setVariantImage(accessories[0]);
             newAccessory.GetComponent<SubAccessoryButton>().setVariantList(accessories);
+            newAccessory.GetComponent<SubAccessoryButton>().setAccessoryRenderer(accessorySpriteRenderer);
         }
     }
 
@@ -43,6 +44,11 @@ public class SubAccessoryMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         accessoryButtons.SetActive(true);
+    }
+
+    public void applyVariantToWeapon(Sprite variatToApply)
+    { 
+        accessorySpriteRenderer.sprite = variatToApply;
     }
 
 }
