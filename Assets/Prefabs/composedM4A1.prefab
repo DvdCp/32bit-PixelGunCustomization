@@ -308,7 +308,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4471760767432070006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -419,7 +419,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5117165017139320616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -448,6 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5269157325235700262}
   - component: {fileID: 5269157325235700261}
+  - component: {fileID: 6155177715022667702}
   m_Layer: 0
   m_Name: muzzle
   m_TagString: Untagged
@@ -523,6 +524,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &6155177715022667702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5269157325235700260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b94bf5a92ef374aaa73fd14f70504c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5269157325313204826
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +712,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269157326239602732}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -810,7 +823,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269157326348717235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1033,7 +1046,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269157326824382517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1042,7 +1055,7 @@ BoxCollider2D:
   m_Offset: {x: 0.02, y: 0.025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     oldSize: {x: 0.04, y: 0.05}
     newSize: {x: 0.04, y: 0.05}
     adaptiveTilingThreshold: 0.5
@@ -1144,7 +1157,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269157327111743040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1905,7 +1918,6 @@ GameObject:
   - component: {fileID: 5636051176323303185}
   - component: {fileID: 5636051176323303190}
   - component: {fileID: 5636051176323303191}
-  - component: {fileID: 5636051176323303188}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2028,20 +2040,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051176323303188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051176323303274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051177517027314}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051176336875238
 GameObject:
   m_ObjectHideFlags: 0

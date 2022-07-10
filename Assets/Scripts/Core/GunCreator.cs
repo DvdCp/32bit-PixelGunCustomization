@@ -93,18 +93,18 @@ public class GunCreator : MonoBehaviour
 
     private void updateVisual()
     {
-        //Destroy(barrel.gameObject.GetComponent<BoxCollider2D>());
-        //BoxCollider2D barrelCollider = barrel.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
-        //var barrelBox = barrelCollider.size;
+        Destroy(barrel.gameObject.GetComponent<BoxCollider2D>());
+        BoxCollider2D barrelCollider = barrel.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
+        var barrelBox = barrelCollider.size;
 
-        //Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
-        //BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
-        //muzzle.transform.localPosition = new Vector3(barrelBox.x, 0f, 0f);
-        //// muzzle.transform.position.x = barrelCenter.x + coords.x / 2;
+        Destroy(muzzle.gameObject.GetComponent<BoxCollider2D>());
+        BoxCollider2D muzzleCollider = muzzle.gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
+        muzzle.transform.localPosition = new Vector3(barrelBox.x, 0f, 0f);
+        // muzzle.transform.position.x = barrelCenter.x + coords.x / 2;
 
-        //// Updating firePoint position
-        //var muzzleBox = muzzleCollider.size;
-        //firePoint.localPosition = new Vector3(muzzleBox.x, muzzleBox.y / 2, 0f);
+        // Updating firePoint position
+        var muzzleBox = muzzleCollider.size;
+        firePoint.localPosition = new Vector3(muzzleBox.x, muzzleBox.y / 2, 0f);
     }
 
 }
