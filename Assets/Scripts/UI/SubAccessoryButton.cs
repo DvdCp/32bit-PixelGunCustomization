@@ -33,7 +33,7 @@ public class SubAccessoryButton : MonoBehaviour
 
     public void nextVariant()
     {
-        // go to next variant
+        // go to next variant (circular array)
         variantIndex++;
 
         if (variantIndex % variantSize == 0)
@@ -47,10 +47,9 @@ public class SubAccessoryButton : MonoBehaviour
 
     public void prevVariant()
     {
-        // go to prev variant
+        // go to prev variant (circular array)
         variantIndex--;
 
-        // update sprite button
         if (variantIndex == -1)
             variantIndex = variantSize - 1;
 
