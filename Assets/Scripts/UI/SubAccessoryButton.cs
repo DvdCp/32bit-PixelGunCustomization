@@ -42,7 +42,7 @@ public class SubAccessoryButton : MonoBehaviour
         // update sprite in button and on weapon
         variantImage.sprite = variantList[variantIndex];
         UpdatingRectTransform(variantList[variantIndex]);
-        accessoryRenderer.sprite = variantList[variantIndex];
+        ApplyToWeapon();
     }
 
     public void prevVariant()
@@ -57,8 +57,13 @@ public class SubAccessoryButton : MonoBehaviour
         // update sprite in button and on weapon
         variantImage.sprite = variantList[variantIndex];
         UpdatingRectTransform(variantList[variantIndex]);
-        accessoryRenderer.sprite = variantList[variantIndex];
+        ApplyToWeapon();
 
+    }
+
+    public void ApplyToWeapon()
+    {
+        accessoryRenderer.sprite = variantList[variantIndex];
     }
 
     private void UpdatingRectTransform(Sprite sprite)
