@@ -31,6 +31,51 @@ Transform:
   m_Father: {fileID: 5269157325235700262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809858443270222909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437231399111764968}
+  - component: {fileID: 7239642888866212161}
+  m_Layer: 0
+  m_Name: SpriteLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437231399111764968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809858443270222909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7018940560885248815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7239642888866212161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809858443270222909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118627062097f7a47a39bd6af69716a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: M4A1
 --- !u!1 &4170892953598551340
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +89,6 @@ GameObject:
   - component: {fileID: 6856497558069146619}
   - component: {fileID: 2704804990813073622}
   - component: {fileID: 7210482382481222915}
-  - component: {fileID: 5636051177130873550}
   m_Layer: 0
   m_Name: composedM4A1
   m_TagString: Untagged
@@ -64,6 +108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 437231399111764968}
   - {fileID: 5269157327111743042}
   - {fileID: 5269157326824382519}
   - {fileID: 5269157326239602734}
@@ -203,19 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437fad3e80b45ff469ebc9edf1cbb52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5636051177130873550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4170892953598551340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118627062097f7a47a39bd6af69716a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: M4A1
 --- !u!1 &4471760767432070006
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4050450299841046095
 SpriteRenderer:
@@ -358,7 +390,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3661171712827415274
 SpriteRenderer:
@@ -566,7 +598,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157325313204827
 SpriteRenderer:
@@ -651,7 +683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326239602733
 SpriteRenderer:
@@ -762,7 +794,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326348717244
 SpriteRenderer:
@@ -874,7 +906,7 @@ Transform:
   m_Children:
   - {fileID: 5269157325235700262}
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326664999034
 SpriteRenderer:
@@ -985,7 +1017,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326824382518
 SpriteRenderer:
@@ -1096,7 +1128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157327111743041
 SpriteRenderer:
@@ -2031,7 +2063,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5636051177517027324}
         m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
         m_MethodName: DeactvivateSubAccessoryMenu
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2604,7 +2636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051176460236020}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2626,8 +2658,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Stock
+  spriteRenderer: {fileID: 5269157327111743041}
+  subMenu: {fileID: 2727902586921389894}
 --- !u!1 &5636051176465407936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,7 +3045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051176534336595}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3034,8 +3067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Aim
+  spriteRenderer: {fileID: 3661171712827415274}
+  subMenu: {fileID: 2723692372603797518}
 --- !u!1 &5636051176661850278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3501,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051176799249645}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3489,8 +3523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Barrel
+  spriteRenderer: {fileID: 5269157326664999034}
+  subMenu: {fileID: 4871952986343205351}
 --- !u!1 &5636051176809002710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,10 +3649,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051177517027324}
-        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
-        m_MethodName: ActvivateSubAccessoryMenu
-        m_Mode: 5
+      - m_Target: {fileID: 5636051176809002717}
+        m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
+        m_MethodName: onClickActvivateSubMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3638,8 +3673,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Mag
+  spriteRenderer: {fileID: 5269157326824382518}
+  subMenu: {fileID: 5636051177517027324}
 --- !u!1 &5636051176847516960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,6 +3685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636051176847516963}
+  - component: {fileID: 8981164746393256874}
   m_Layer: 5
   m_Name: SubGripAccessoriesList
   m_TagString: Untagged
@@ -3680,6 +3717,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8981164746393256874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636051176847516960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5636051176865509598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,7 +3864,6 @@ GameObject:
   - component: {fileID: 5636051176869299997}
   - component: {fileID: 5636051176869299986}
   - component: {fileID: 5636051176869299987}
-  - component: {fileID: 5636051176869299984}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3925,9 +3974,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051176869299984}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 7434614119356406653}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3937,20 +3986,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051176869299984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051176869299990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051177026610553}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051176870880203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,7 +4221,6 @@ GameObject:
   - component: {fileID: 5636051176877659973}
   - component: {fileID: 5636051176877659994}
   - component: {fileID: 5636051176877659995}
-  - component: {fileID: 5636051176877659992}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -4297,9 +4331,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051176877659992}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 4871952986343205351}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4309,20 +4343,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051176877659992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051176877659998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051177672146400}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051176881463422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,7 +4490,6 @@ GameObject:
   - component: {fileID: 5636051176887587552}
   - component: {fileID: 5636051176887587553}
   - component: {fileID: 5636051176887587558}
-  - component: {fileID: 5636051176887587559}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -4581,9 +4600,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051176887587559}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 6332462213015925457}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4593,20 +4612,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051176887587559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051176887587557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051177184946002}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051176910307073
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,7 +4957,6 @@ GameObject:
   - component: {fileID: 5636051177002623301}
   - component: {fileID: 5636051177002623322}
   - component: {fileID: 5636051177002623323}
-  - component: {fileID: 5636051177002623320}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -5063,9 +5067,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051177002623320}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 2727902586921389894}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5075,20 +5079,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051177002623320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051177002623326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051177804082996}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051177004297279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,6 +5350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636051177026610552}
+  - component: {fileID: 7434614119356406653}
   m_Layer: 5
   m_Name: SubBodyAccessoriesList
   m_TagString: Untagged
@@ -5391,6 +5382,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7434614119356406653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636051177026610553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5636051177029121008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5971,6 +5975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636051177184946013}
+  - component: {fileID: 6332462213015925457}
   m_Layer: 5
   m_Name: SubHandgripAccessoriesList
   m_TagString: Untagged
@@ -6002,6 +6007,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6332462213015925457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636051177184946002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5636051177209566379
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6098,7 @@ RectTransform:
   - {fileID: 5636051177184946013}
   - {fileID: 5636051177517027325}
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6273,7 +6291,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051177256234169}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6295,8 +6313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Body
+  spriteRenderer: {fileID: 5269157326239602733}
+  subMenu: {fileID: 7434614119356406653}
 --- !u!1 &5636051177266363183
 GameObject:
   m_ObjectHideFlags: 0
@@ -7205,10 +7224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: Mag
-  accessorySpriteRenderer: {fileID: 5269157326824382518}
   accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
-  spriteLoader: {fileID: 5636051177130873550}
 --- !u!1 &5636051177593384031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,7 +7237,6 @@ GameObject:
   - component: {fileID: 5636051177593384026}
   - component: {fileID: 5636051177593384027}
   - component: {fileID: 5636051177593384024}
-  - component: {fileID: 5636051177593384025}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -7332,9 +7347,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5636051177593384025}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 8981164746393256874}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7344,20 +7359,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5636051177593384025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5636051177593384031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5636051176847516960}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5636051177605161047
 GameObject:
   m_ObjectHideFlags: 0
@@ -7923,6 +7924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636051177672146403}
+  - component: {fileID: 4871952986343205351}
   m_Layer: 5
   m_Name: SubBarrelAccessoriesList
   m_TagString: Untagged
@@ -7954,6 +7956,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4871952986343205351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636051177672146400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5636051177741597869
 GameObject:
   m_ObjectHideFlags: 0
@@ -8346,6 +8361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636051177804082999}
+  - component: {fileID: 2727902586921389894}
   m_Layer: 5
   m_Name: SubStockAccessoriesList
   m_TagString: Untagged
@@ -8377,6 +8393,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2727902586921389894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636051177804082996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5636051177904307995
 GameObject:
   m_ObjectHideFlags: 0
@@ -8796,7 +8825,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051178058486463}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8818,8 +8847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Grip
+  spriteRenderer: {fileID: 5269157326348717244}
+  subMenu: {fileID: 8981164746393256874}
 --- !u!1 &5636051178068382439
 GameObject:
   m_ObjectHideFlags: 0
@@ -9342,7 +9372,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5636051178204907027}
         m_TargetAssemblyTypeName: AccessoryButton, Assembly-CSharp
-        m_MethodName: onClick
+        m_MethodName: onClickActvivateSubMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9364,8 +9394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a637664ea520274b941577f17d85e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryName: 
-  spriteRenderer: {fileID: 0}
+  accessoryName: Handgrip
+  spriteRenderer: {fileID: 5269157325313204827}
+  subMenu: {fileID: 6332462213015925457}
 --- !u!1 &5636051178214520606
 GameObject:
   m_ObjectHideFlags: 0
@@ -10238,6 +10269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5821809240826689380}
+  - component: {fileID: 2723692372603797518}
   m_Layer: 5
   m_Name: SubAimAccessoriesList
   m_TagString: Untagged
@@ -10269,6 +10301,19 @@ RectTransform:
   m_AnchoredPosition: {x: 266.24, y: -540}
   m_SizeDelta: {x: 532.4896, y: 925.4073}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2723692372603797518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821809240826689381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64edb841a95ed0e4488b4f6f780a6556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessoryVariantButton: {fileID: 3201520798559506587, guid: 47f8c8cd2c1edd74d9c921f36f61a783, type: 3}
 --- !u!1 &5821809241369210148
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,7 +10326,6 @@ GameObject:
   - component: {fileID: 5821809241369210144}
   - component: {fileID: 5821809241369210145}
   - component: {fileID: 5821809241369210146}
-  - component: {fileID: 5821809241369210157}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -10392,9 +10436,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5821809241369210157}
-        m_TargetAssemblyTypeName: BackToAccessories, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 2723692372603797518}
+        m_TargetAssemblyTypeName: SubAccessoryMenu, Assembly-CSharp
+        m_MethodName: DeactvivateSubAccessoryMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10404,20 +10448,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5821809241369210157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5821809241369210148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d51f45984bf948b9fd43cb105d11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessoryVariantsList: {fileID: 5821809240826689381}
-  accessoriesList: {fileID: 5636051176792708778}
 --- !u!1 &5821809241581892876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10570,7 +10600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.x
@@ -10578,7 +10608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_SizeDelta.x
@@ -10622,7 +10652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -82.5343
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10978,7 +11008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.x
@@ -10986,7 +11016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_SizeDelta.x
@@ -11030,7 +11060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -82.5343
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11080,7 +11110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.x
@@ -11088,7 +11118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_SizeDelta.x
@@ -11132,7 +11162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -82.5343
       objectReference: {fileID: 0}
     - target: {fileID: 3201520798559506586, guid: d15c624e2aa3ec142accb9d574586d38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -4,25 +4,37 @@ using System.Collections.Generic;
 
 public class SubAccessoryMenu : MonoBehaviour
 {
-    [SerializeField] string accessoryName;
-    [SerializeField] SpriteRenderer accessorySpriteRenderer;
     [SerializeField] GameObject accessoryVariantButton;
-    [SerializeField] SpriteLoader spriteLoader;
 
+    private SpriteLoader spriteLoader;
     private GameObject accessoryButtons;
     private Transform Scroll;
     private Transform Panel;
 
+    private string _accessoryName;
+    public string AccessoryName { set => _accessoryName = value; }
+
+    private SpriteRenderer _accessorySpriteRenderer;
+    public SpriteRenderer AccessorySpriteRenderer { set => _accessorySpriteRenderer = value; }
+
+
     void Awake()
     {
+        CreateVariantsMenu();
+    }
+
+    private void CreateVariantsMenu()
+    {
+        spriteLoader = GameObject.Find("SpriteLoader").GetComponent<SpriteLoader>();
+
         accessoryButtons = GameObject.Find("AccessoriesButtonGroup");
         Scroll = transform.Find("Scroll");
         Panel = Scroll.Find("Panel");
 
         // Setting accessories list name
-        transform.Find("Accessory_name").GetComponent<TextMeshProUGUI>().text = accessoryName;
+        transform.Find("Accessory_name").GetComponent<TextMeshProUGUI>().text = _accessoryName;
 
-        List<Sprite[]> accessoryLists = spriteLoader.getAccessoriesByName(accessoryName);
+        List<Sprite[]> accessoryLists = spriteLoader.getAccessoriesByName(_accessoryName);
 
         foreach (Sprite[] accessories in accessoryLists)
         {
@@ -31,16 +43,16 @@ public class SubAccessoryMenu : MonoBehaviour
 
             newAccessory.GetComponent<SubAccessoryButton>().setVariantImage(accessories[0]);
             newAccessory.GetComponent<SubAccessoryButton>().setVariantList(accessories);
-            newAccessory.GetComponent<SubAccessoryButton>().setAccessoryRenderer(accessorySpriteRenderer);
+            newAccessory.GetComponent<SubAccessoryButton>().setAccessoryRenderer(_accessorySpriteRenderer);
         }
     }
 
-    public void ActvivateSubAccessoryMenu(string name)
+    public void ActvivateSubAccessoryMenu()
     { 
         gameObject.SetActive(true);
         accessoryButtons.SetActive(false);
     }
-    public void DeactvivateSubAccessoryMenu(string name)
+    public void DeactvivateSubAccessoryMenu()
     {
         gameObject.SetActive(false);
         accessoryButtons.SetActive(true);
@@ -48,7 +60,7 @@ public class SubAccessoryMenu : MonoBehaviour
 
     public void applyVariantToWeapon(Sprite variatToApply)
     { 
-        accessorySpriteRenderer.sprite = variatToApply;
+        _accessorySpriteRenderer.sprite = variatToApply;
     }
 
 }

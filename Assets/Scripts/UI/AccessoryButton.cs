@@ -7,25 +7,18 @@ public class AccessoryButton : MonoBehaviour
 {
     [SerializeField] string accessoryName;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] SubAccessoryMenu subMenu;
 
 
     private void Start()
     {
-
+        // Setting accessoryName and spriteRenderer to subMenu
+        subMenu.AccessoryName = accessoryName;
+        subMenu.AccessorySpriteRenderer = spriteRenderer;
     }
 
-    public void onClick()
+    public void onClickActvivateSubMenu()
     {
-
-
-        //for (int i = 0; i < directoryCount; i++)
-        //{
-        //    GameObject newAccessoryButton = Instantiate(accessoryVariantButton);
-        //    Image accessoryImage = newAccessoryButton.transform.Find("AccessoryTypeButton").Find("AccessoryImage").GetComponent<Image>();
-        //    accessoryImage.sprite = 
-        //    newButton.transform.SetParent(Panel);
-        //}
-
-        //gunCreator.ActivateSubAccessoryMenu();
+        subMenu.ActvivateSubAccessoryMenu();
     }
 }
