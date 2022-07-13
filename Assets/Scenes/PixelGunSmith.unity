@@ -206,6 +206,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2704804990813073622, guid: 3573ee2df963b3f4fab8792226f333b9, type: 3}
+      propertyPath: fireRateo
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4170892953598551340, guid: 3573ee2df963b3f4fab8792226f333b9, type: 3}
       propertyPath: m_Name
       value: composedM4A1

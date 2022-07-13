@@ -42,7 +42,6 @@ public class PlaymodeScript : MonoBehaviour
 
         _playerInput.enabled = false;
 
-        print("marona");
         _gunController.resetPosition();
     }
 }

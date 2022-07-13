@@ -9,7 +9,6 @@ public class SpriteLoader : MonoBehaviour
     // This dict stores for each folder multiple lists of sprites (accessory variants)
     private Dictionary<string, List<Sprite[]>> weaponAccessories;
 
-    // Start is called before the first frame update
     void Start()
     {
         GetAccessoriesDividedByVariants();
@@ -34,7 +33,6 @@ public class SpriteLoader : MonoBehaviour
             foreach (DirectoryInfo subDir in subDirs)
             {
                 var spritesToLoad = weaponName + "/" + dir.Name + "/" + subDir.Name + "/" + subDir.GetFiles()[0].Name.Replace(".png", "");
-                print(spritesToLoad);
                 sprites.Add(Resources.LoadAll<Sprite>(spritesToLoad));
             }
  

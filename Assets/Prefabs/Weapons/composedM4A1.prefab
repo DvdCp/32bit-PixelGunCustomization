@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &296486521156961875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7519812616491322316}
+  m_Layer: 0
+  m_Name: shutter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7519812616491322316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296486521156961875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0734, y: 0.0345, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5269157326239602734}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395146636171825782
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,9 +295,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57168b757dbc15c4fb3978e80d9485d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRateo: 15
   _anim: {fileID: 7201531067860863549}
-  _bullet: {fileID: 8684787610974803914, guid: f60cb4dd555f6ea45b445e77991fce79, type: 3}
-  _firePoint: {fileID: 395146636171825782}
+  bullet: {fileID: 8684787610974803914, guid: f60cb4dd555f6ea45b445e77991fce79, type: 3}
+  shell: {fileID: 8684787610974803914, guid: e80dc960090aa064f9368e20367fc6d0, type: 3}
+  firePoint: {fileID: 395146636171825782}
+  shutter: {fileID: 296486521156961875}
 --- !u!114 &708364666710862231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +769,8 @@ Transform:
   m_LocalPosition: {x: -0.07350279, y: -0.055635467, z: 0.43833858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7519812616491322316}
   m_Father: {fileID: 6633429542573306485}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
