@@ -7,10 +7,12 @@
 /[Ll]ogs/
 Assets/AssetStoreTools*
 
+/Logs/
+
 # Visual Studio cache directory & .vsconfig file
-\.vs/
-\.vscode/
-\*.vsconfig
+/.vs/
+/.vscode/
+/*.vsconfig
 
 # All .log files
 *.log
@@ -33,9 +35,9 @@ ExportedObj/
 *.VC.db
 
 # Unity3D generated meta files
-\*.pidb.meta
-\*.pdb.meta
-\*.meta
+/*.pidb.meta
+/*.pdb.meta
+/*.meta
 *.meta
 
 # Unity3D Generated File On Crash Reports
