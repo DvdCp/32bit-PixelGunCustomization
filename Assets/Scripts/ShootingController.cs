@@ -5,23 +5,16 @@ using UnityEngine.InputSystem;
 
 public class ShootingController : MonoBehaviour
 {
-    private Animator _anim;
-
+    [SerializeField] Animator _anim;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private GameObject _firePoint;
-
-    private void Start() 
-    {
-        _anim = GetComponent<Animator>();
-    }
-
 
     // Start is called before the first frame update
     public void onFire(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
-            //_anim.SetTrigger("fire");
+            _anim.SetTrigger("fire");
             Instantiate(_bullet, _firePoint.transform.position, _firePoint.transform.rotation);
             //_anim.SetBool("isFiring", false);
         }
