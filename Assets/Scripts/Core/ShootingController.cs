@@ -18,10 +18,10 @@ public class ShootingController : MonoBehaviour
         while (isShooting && Time.time >= nextTimeToShoot)
         {
             _anim.SetTrigger("fire");
+
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-            GameObject shellToExpel = Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
-            shellToExpel.GetComponent<Rigidbody2D>().AddForce(transform.up, ForceMode2D.Impulse);
-            Destroy(shellToExpel, 2f);
+            Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
+
             nextTimeToShoot = Time.time + 1f / fireRateo;
         }
     }
