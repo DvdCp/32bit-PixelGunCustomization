@@ -61,7 +61,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7239642888866212161
 MonoBehaviour:
@@ -76,6 +76,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: M4A1
+--- !u!1 &2661436790223271771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6633429542573306485}
+  - component: {fileID: 6072282559852165840}
+  m_Layer: 0
+  m_Name: weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6633429542573306485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661436790223271771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5269157327111743042}
+  - {fileID: 5269157326824382519}
+  - {fileID: 5269157326239602734}
+  - {fileID: 5269157326348717245}
+  - {fileID: 5269157325313204836}
+  - {fileID: 5269157326664999035}
+  - {fileID: 5237802335760137806}
+  - {fileID: 3958371796449952187}
+  m_Father: {fileID: 7018940560885248815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6072282559852165840
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661436790223271771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10b3aedf853a68f4bad1e8fbb68ff20f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4170892953598551340
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,15 +168,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6633429542573306485}
   - {fileID: 437231399111764968}
-  - {fileID: 5269157327111743042}
-  - {fileID: 5269157326824382519}
-  - {fileID: 5269157326239602734}
-  - {fileID: 5269157326348717245}
-  - {fileID: 5269157325313204836}
-  - {fileID: 5269157326664999035}
-  - {fileID: 5237802335760137806}
-  - {fileID: 3958371796449952187}
   - {fileID: 5636051177234114375}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -234,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57168b757dbc15c4fb3978e80d9485d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _anim: {fileID: 6072282559852165840}
   _bullet: {fileID: 8684787610974803914, guid: f60cb4dd555f6ea45b445e77991fce79, type: 3}
   _firePoint: {fileID: 395146636171825782}
 --- !u!114 &7210482382481222915
@@ -278,8 +332,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 7
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4050450299841046095
 SpriteRenderer:
@@ -389,8 +443,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 8
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3661171712827415274
 SpriteRenderer:
@@ -597,8 +651,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 5
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157325313204827
 SpriteRenderer:
@@ -682,8 +736,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 3
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326239602733
 SpriteRenderer:
@@ -793,8 +847,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 4
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326348717244
 SpriteRenderer:
@@ -905,8 +959,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5269157325235700262}
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 6
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326664999034
 SpriteRenderer:
@@ -1016,8 +1070,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 2
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157326824382518
 SpriteRenderer:
@@ -1127,8 +1181,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 1
+  m_Father: {fileID: 6633429542573306485}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269157327111743041
 SpriteRenderer:
@@ -6098,7 +6152,7 @@ RectTransform:
   - {fileID: 5636051177184946013}
   - {fileID: 5636051177517027325}
   m_Father: {fileID: 7018940560885248815}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
