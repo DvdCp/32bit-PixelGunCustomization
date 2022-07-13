@@ -34,6 +34,7 @@ public class SpriteLoader : MonoBehaviour
             foreach (DirectoryInfo subDir in subDirs)
             {
                 var spritesToLoad = weaponName + "/" + dir.Name + "/" + subDir.Name + "/" + subDir.GetFiles()[0].Name.Replace(".png", "");
+                print(spritesToLoad);
                 sprites.Add(Resources.LoadAll<Sprite>(spritesToLoad));
             }
  

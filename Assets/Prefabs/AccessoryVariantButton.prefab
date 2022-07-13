@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2193625361201371454}
+      - m_Target: {fileID: 787037178359208886}
         m_TargetAssemblyTypeName: SubAccessoryButton, Assembly-CSharp
         m_MethodName: ApplyToWeapon
         m_Mode: 1
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2193625361201371454}
+      - m_Target: {fileID: 787037178359208886}
         m_TargetAssemblyTypeName: SubAccessoryButton, Assembly-CSharp
         m_MethodName: prevVariant
         m_Mode: 1
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3201520798559506586}
   - component: {fileID: 3201520798559506585}
-  - component: {fileID: 2193625361201371454}
+  - component: {fileID: 787037178359208886}
   m_Layer: 5
   m_Name: AccessoryVariantButton
   m_TagString: Untagged
@@ -316,7 +316,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3201520798559506587}
   m_CullTransparentMesh: 1
---- !u!114 &2193625361201371454
+--- !u!114 &787037178359208886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3201520798559506587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8963e5cc0eb364da4935b402188d24, type: 3}
+  m_Script: {fileID: 11500000, guid: 25ffe0605264b5347bc98987fb859ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3201520798724778723
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2193625361201371454}
+      - m_Target: {fileID: 787037178359208886}
         m_TargetAssemblyTypeName: SubAccessoryButton, Assembly-CSharp
         m_MethodName: nextVariant
         m_Mode: 1

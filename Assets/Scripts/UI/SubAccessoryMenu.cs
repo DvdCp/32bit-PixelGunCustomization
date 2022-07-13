@@ -17,7 +17,6 @@ public class SubAccessoryMenu : MonoBehaviour
     private SpriteRenderer _accessorySpriteRenderer;
     public SpriteRenderer AccessorySpriteRenderer { set => _accessorySpriteRenderer = value; }
 
-
     void Awake()
     {
         CreateVariantsMenu();
@@ -38,6 +37,7 @@ public class SubAccessoryMenu : MonoBehaviour
 
         foreach (Sprite[] accessories in accessoryLists)
         {
+
             var newAccessory = Instantiate(accessoryVariantButton);
             newAccessory.transform.SetParent(Panel);
 
