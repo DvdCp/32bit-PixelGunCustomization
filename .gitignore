@@ -8,9 +8,9 @@
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory & .vsconfig file
-.vs/
-.vscode/
-*.vsconfig
+\.vs/
+\.vscode/
+\*.vsconfig
 
 # All .log files
 *.log
@@ -36,6 +36,7 @@ ExportedObj/
 \*.pidb.meta
 \*.pdb.meta
 \*.meta
+*.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
