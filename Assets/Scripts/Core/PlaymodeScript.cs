@@ -5,24 +5,33 @@ using UnityEngine.InputSystem;
 public class PlaymodeScript : MonoBehaviour
 {
     [SerializeField] private Button _TryGunButton;
-    [SerializeField] private Button _ExitButton;
+    [SerializeField] private GameObject ExitHintLabel;
     [SerializeField] private GameObject _AccessioriesButtonGroup;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GunController _gunController;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        PlayerController playerController = new PlayerController();
+        playerController.Player.ExitPlayMode.performed += exitTryGunMode;
+
+        // Enabling playerController
+        playerController.Player.Enable();
+    }
+
+
     void Start()
     {
         // Setting buttons state
         _TryGunButton.gameObject.SetActive(true);
-        _ExitButton.gameObject.SetActive(false);
+        ExitHintLabel.SetActive(false);
         _playerInput.enabled = false;
     }
 
     public void enterTryGunMode()
     {
         // Enabling "Exit" button
-        _ExitButton.gameObject.SetActive(true);
+        ExitHintLabel.SetActive(true);
         // Disabling accessories button group
         _AccessioriesButtonGroup.SetActive(false);
         // Enabling "Try Gun" button (disabling itself)
@@ -31,17 +40,21 @@ public class PlaymodeScript : MonoBehaviour
         _playerInput.enabled = true;
     }
 
-    public void exitTryGunMode()
+    public void exitTryGunMode(InputAction.CallbackContext context)
     {
-        // Enabling "Try Gun" button
-        _TryGunButton.gameObject.SetActive(true);
-        // Enabling accessories button group
-        _AccessioriesButtonGroup.SetActive(true);
-        // Disabling "Exit" button (disabling itself)
-        _ExitButton.gameObject.SetActive(false);
+        if (context.performed)
+        { 
+            // Enabling "Try Gun" button
+            _TryGunButton.gameObject.SetActive(true);
+            // Enabling accessories button group
+            _AccessioriesButtonGroup.SetActive(true);
+            // Disabling "Exit" button (disabling itself)
+            ExitHintLabel.SetActive(false);
 
-        _playerInput.enabled = false;
+            _playerInput.enabled = false;
 
-        _gunController.resetPosition();
+            _gunController.resetPosition();
+
+        }
     }
 }
