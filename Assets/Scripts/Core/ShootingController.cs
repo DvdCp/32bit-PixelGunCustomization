@@ -22,7 +22,7 @@ public class ShootingController : MonoBehaviour
     private AudioClip reloadSound;
 
     // Rounds per mag can be changed when a different mag is equipped
-    private int roundsPerMag = 30;
+    private int roundsPerMag = 10;
     public int RoundsPerMag { get => roundsPerMag; set => roundsPerMag = value; }
     private int remainingRounds;
 
@@ -53,8 +53,10 @@ public class ShootingController : MonoBehaviour
 
     private void Update()
     {
-        while (isShooting && Time.time >= nextTimeToShoot)
+        while (isShooting && Time.time >= nextTimeToShoot && remainingRounds > 0)
         {
+            remainingRounds--;
+
             // Fire effects
             _animator.SetTrigger("fire");
             source.PlayOneShot(gunShot);
@@ -63,6 +65,7 @@ public class ShootingController : MonoBehaviour
             Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
 
             nextTimeToShoot = Time.time + 1f / fireRateo;
+            
         }
     }
 
@@ -70,11 +73,8 @@ public class ShootingController : MonoBehaviour
     // This is the only way to "simulate" hold behaviour like old input system
     public void onFire(InputAction.CallbackContext context)
     {
-        if (context.performed && remainingRounds > 0)
-        { 
-            remainingRounds--;
+        if (context.performed)
             isShooting = true;
-        }
 
         if(context.canceled)
             isShooting = false;    
