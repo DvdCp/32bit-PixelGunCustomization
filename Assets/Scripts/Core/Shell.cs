@@ -6,7 +6,6 @@ public class Shell : MonoBehaviour
 
     Rigidbody2D _rb;
 
-
     void Start()
     {
         // Random ejecting trajectory (backwards)

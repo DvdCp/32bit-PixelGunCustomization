@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ShootingController : MonoBehaviour
 {
@@ -10,14 +11,31 @@ public class ShootingController : MonoBehaviour
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject shutter;
 
+    private AudioSource[] gunAudios;
+    private AudioSource source;
+    private AudioClip gunShot;
+    private AudioClip dryGun;
+    private AudioClip reloadSound;
+
     private float nextTimeToShoot = 0f;
     private bool isShooting = false;
+
+    private void Awake()
+    {
+        gunAudios = GetComponents<AudioSource>();
+        source = gunAudios[0];
+        gunShot = gunAudios[0].clip;
+        dryGun = gunAudios[1].clip;
+        reloadSound = gunAudios[2].clip;
+    }
 
     private void Update()
     {
         while (isShooting && Time.time >= nextTimeToShoot)
         {
+            // Fire effects
             _anim.SetTrigger("fire");
+            source.PlayOneShot(gunShot);
 
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
             Instantiate(shell, shutter.transform.position, shutter.transform.rotation);

@@ -10,6 +10,7 @@ public class SubAccessoryMenu : MonoBehaviour
     private GameObject accessoryButtons;
     private Transform Scroll;
     private Transform Panel;
+    private GameObject playmodeButtonGroup;
 
     private string _accessoryName;
     public string AccessoryName { set => _accessoryName = value; }
@@ -20,6 +21,8 @@ public class SubAccessoryMenu : MonoBehaviour
     void Awake()
     {
         CreateVariantsMenu();
+
+        playmodeButtonGroup = GameObject.Find("PlaymodeButtonGroup");
     }
 
     private void CreateVariantsMenu()
@@ -40,9 +43,9 @@ public class SubAccessoryMenu : MonoBehaviour
 
         List<Sprite[]> accessoryLists = spriteLoader.getAccessoriesByName(_accessoryName);
 
+        // Foreach accessory sprite, create a new button and set up its components
         foreach (Sprite[] accessories in accessoryLists)
         {
-
             var newAccessory = Instantiate(accessoryVariantButton);
             newAccessory.transform.SetParent(Panel);
 
@@ -56,11 +59,13 @@ public class SubAccessoryMenu : MonoBehaviour
     { 
         gameObject.SetActive(true);
         accessoryButtons.SetActive(false);
+        playmodeButtonGroup.SetActive(false);
     }
     public void DeactvivateSubAccessoryMenu()
     {
         gameObject.SetActive(false);
         accessoryButtons.SetActive(true);
+        playmodeButtonGroup.SetActive(true);
     }
 
 }

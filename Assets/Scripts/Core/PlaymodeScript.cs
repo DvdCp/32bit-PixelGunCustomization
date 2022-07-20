@@ -23,7 +23,6 @@ public class PlaymodeScript : MonoBehaviour
         playerController.Player.Enable();
     }
 
-
     void Start()
     {
         // Setting buttons state
