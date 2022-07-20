@@ -21,6 +21,11 @@ public class ShootingController : MonoBehaviour
     private AudioClip dryGun;
     private AudioClip reloadSound;
 
+    // Rounds per mag can be changed when a different mag is equipped
+    private int roundsPerMag = 30;
+    public int RoundsPerMag { get => roundsPerMag; set => roundsPerMag = value; }
+    private int remainingRounds;
+
     private float nextTimeToShoot = 0f;
     private bool isShooting = false;
     private bool isReloading = false;
@@ -40,6 +45,9 @@ public class ShootingController : MonoBehaviour
         foreach(var clip in clips)
             if (clip.name == "reload")
                 reloadTime = clip.length;
+
+        // Initializing rounds in mag
+        remainingRounds = roundsPerMag;
 
     }
 
@@ -62,8 +70,11 @@ public class ShootingController : MonoBehaviour
     // This is the only way to "simulate" hold behaviour like old input system
     public void onFire(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed && remainingRounds > 0)
+        { 
+            remainingRounds--;
             isShooting = true;
+        }
 
         if(context.canceled)
             isShooting = false;    
@@ -81,14 +92,13 @@ public class ShootingController : MonoBehaviour
 
     private IEnumerator Reload()
     {
-        print(reloadTime);
-
         isReloading = true;
         _animator.SetTrigger("reload");
         source.PlayOneShot(reloadSound);
 
         yield return new WaitForSeconds(reloadTime);
-        //_roundsInMag = maxRounds;
+
+        remainingRounds = roundsPerMag;
         //ammoCount.text = "" + _roundsInMag;
         //_anim.SetBool("isOutOfAmmo", false);
 
