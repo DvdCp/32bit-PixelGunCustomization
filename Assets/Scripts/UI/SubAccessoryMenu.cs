@@ -30,6 +30,11 @@ public class SubAccessoryMenu : MonoBehaviour
         Scroll = transform.Find("Scroll");
         Panel = Scroll.Find("Panel");
 
+        // Checking if this sub accessory menu has a no_accessory button. If there is a No_Accessory button, set accessory renderer to it, do nothing otherwise
+        Transform noAccessoryButton = Panel.Find("No_Accessory");
+        if (noAccessoryButton != null)
+            noAccessoryButton.GetComponent<NoAccessoryButton>().setAccessoryRenderer(_accessorySpriteRenderer);
+
         // Setting accessories list name
         transform.Find("Accessory_name").GetComponent<TextMeshProUGUI>().text = _accessoryName;
 
@@ -56,11 +61,6 @@ public class SubAccessoryMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         accessoryButtons.SetActive(true);
-    }
-
-    public void applyVariantToWeapon(Sprite variatToApply)
-    { 
-        _accessorySpriteRenderer.sprite = variatToApply;
     }
 
 }

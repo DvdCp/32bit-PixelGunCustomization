@@ -10,10 +10,14 @@ public class PlaymodeScript : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GunController _gunController;
 
+    private bool isPlaymode;
+
     private void Awake()
     {
         PlayerController playerController = new PlayerController();
         playerController.Player.ExitPlayMode.performed += exitTryGunMode;
+
+        isPlaymode = false;
 
         // Enabling playerController
         playerController.Player.Enable();
@@ -30,6 +34,8 @@ public class PlaymodeScript : MonoBehaviour
 
     public void enterTryGunMode()
     {
+        isPlaymode = true;
+
         // Enabling "Exit" button
         ExitHintLabel.SetActive(true);
         // Disabling accessories button group
@@ -42,8 +48,10 @@ public class PlaymodeScript : MonoBehaviour
 
     public void exitTryGunMode(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && isPlaymode)
         { 
+            isPlaymode = false;
+
             // Enabling "Try Gun" button
             _TryGunButton.gameObject.SetActive(true);
             // Enabling accessories button group

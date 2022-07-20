@@ -8,10 +8,6 @@ using UnityEngine.UI;
 public class GunCreator : MonoBehaviour
 {
     [SerializeField] string weaponName;
-    [SerializeField] GameObject SubAccessoryMenu;
-
-    // This dict stores for each folder multiple lists of sprites (accessory variants)
-    private Dictionary<string, List<Sprite[]>> weaponAccessories;
 
     //private Sprite[] _bodies;
     //private Sprite[] _stocks;
