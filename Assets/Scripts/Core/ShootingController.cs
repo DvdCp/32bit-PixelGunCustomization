@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -5,11 +6,14 @@ using UnityEngine.UI;
 public class ShootingController : MonoBehaviour
 {
     [SerializeField] float fireRateo = 15f;
-    [SerializeField] Animator _anim;
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject shell;
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject shutter;
+    [SerializeField] private Animator _animator;
+
+    private AnimationClip[] clips;
+    private float reloadTime;
 
     private AudioSource[] gunAudios;
     private AudioSource source;
@@ -19,6 +23,7 @@ public class ShootingController : MonoBehaviour
 
     private float nextTimeToShoot = 0f;
     private bool isShooting = false;
+    private bool isReloading = false;
 
     private void Awake()
     {
@@ -27,6 +32,15 @@ public class ShootingController : MonoBehaviour
         gunShot = gunAudios[0].clip;
         dryGun = gunAudios[1].clip;
         reloadSound = gunAudios[2].clip;
+
+        // Getting all animations duration
+        clips = _animator.runtimeAnimatorController.animationClips;
+
+        // Selecting onle "reload" animation and get its duration
+        foreach(var clip in clips)
+            if (clip.name == "reload")
+                reloadTime = clip.length;
+
     }
 
     private void Update()
@@ -34,7 +48,7 @@ public class ShootingController : MonoBehaviour
         while (isShooting && Time.time >= nextTimeToShoot)
         {
             // Fire effects
-            _anim.SetTrigger("fire");
+            _animator.SetTrigger("fire");
             source.PlayOneShot(gunShot);
 
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
@@ -53,6 +67,32 @@ public class ShootingController : MonoBehaviour
 
         if(context.canceled)
             isShooting = false;    
+    }
+
+    public void onReload(InputAction.CallbackContext context)
+    {
+
+        if (context.started && !isReloading)
+        {
+            StartCoroutine(Reload());
+        }
+
+    }
+
+    private IEnumerator Reload()
+    {
+        print(reloadTime);
+
+        isReloading = true;
+        _animator.SetTrigger("reload");
+        source.PlayOneShot(reloadSound);
+
+        yield return new WaitForSeconds(reloadTime);
+        //_roundsInMag = maxRounds;
+        //ammoCount.text = "" + _roundsInMag;
+        //_anim.SetBool("isOutOfAmmo", false);
+
+        isReloading = false;
     }
 
 }
