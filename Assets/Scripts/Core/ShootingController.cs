@@ -17,9 +17,23 @@ public class ShootingController : MonoBehaviour
 
     private AudioSource[] gunAudios;
     private AudioSource source;
-    private AudioClip gunShot;
+
+    private AudioClip normalGunShot;    
     private AudioClip dryGun;
     private AudioClip reloadSound;
+
+    // This is clip that will be played. If a silencer is equipped, silenced shot is played (see ApplySilencedSound.cs)
+    private AudioClip actualShotSound;
+    public AudioClip ActualShotSound 
+    {  
+        get { return actualShotSound; }
+        set { if (value != null)
+                actualShotSound = value;
+              else
+                actualShotSound = normalGunShot;
+            }
+            
+    }
 
     // Rounds per mag can be changed when a different mag is equipped
     private int roundsPerMag = 30;
@@ -35,9 +49,12 @@ public class ShootingController : MonoBehaviour
     {
         gunAudios = GetComponents<AudioSource>();
         source = gunAudios[0];
-        gunShot = gunAudios[0].clip;
+        normalGunShot = gunAudios[0].clip;
         dryGun = gunAudios[1].clip;
         reloadSound = gunAudios[2].clip;
+
+        // Setting actualShotSound as normal one
+        ActualShotSound = normalGunShot;
 
         // Getting all animations duration
         clips = _animator.runtimeAnimatorController.animationClips;
@@ -62,7 +79,7 @@ public class ShootingController : MonoBehaviour
 
                 // Fire effects
                 _animator.SetTrigger("fire");
-                source.PlayOneShot(gunShot);
+                source.PlayOneShot(ActualShotSound);
 
                 Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
                 Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
