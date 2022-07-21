@@ -22,12 +22,13 @@ public class ShootingController : MonoBehaviour
     private AudioClip reloadSound;
 
     // Rounds per mag can be changed when a different mag is equipped
-    private int roundsPerMag = 10;
+    private int roundsPerMag = 30;
     public int RoundsPerMag { get => roundsPerMag; set => roundsPerMag = value; }
     private int remainingRounds;
 
     private float nextTimeToShoot = 0f;
-    private bool isShooting = false;
+    private bool isHoldingTrigger = false;
+    private bool canClickAsDryGun = true;   // Initially can click as dry gun
     private bool isReloading = false;
 
     private void Awake()
@@ -53,20 +54,32 @@ public class ShootingController : MonoBehaviour
 
     private void Update()
     {
-        while (isShooting && Time.time >= nextTimeToShoot && remainingRounds > 0)
+        if (isHoldingTrigger && Time.time >= nextTimeToShoot)
         {
-            remainingRounds--;
+            if (remainingRounds > 0)
+            {
+                remainingRounds--;
 
-            // Fire effects
-            _animator.SetTrigger("fire");
-            source.PlayOneShot(gunShot);
+                // Fire effects
+                _animator.SetTrigger("fire");
+                source.PlayOneShot(gunShot);
 
-            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-            Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
+                Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+                Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
+
+                //nextTimeToShoot = Time.time + 1f / fireRateo;
+            }
+            else if (canClickAsDryGun)
+            {
+                // *Click*
+                source.PlayOneShot(dryGun);
+                canClickAsDryGun = false;
+            }
 
             nextTimeToShoot = Time.time + 1f / fireRateo;
-            
+
         }
+
     }
 
     // This function is triggered by PlayerInput component.
@@ -74,19 +87,24 @@ public class ShootingController : MonoBehaviour
     public void onFire(InputAction.CallbackContext context)
     {
         if (context.performed)
-            isShooting = true;
+            isHoldingTrigger = true;
 
-        if(context.canceled)
-            isShooting = false;    
+        if (context.canceled)
+        { 
+            isHoldingTrigger = false;   
+            
+            // Resetting *Click* when trigger is released
+            canClickAsDryGun = true;
+        }
+
+        
     }
 
     public void onReload(InputAction.CallbackContext context)
     {
 
         if (context.started && !isReloading)
-        {
             StartCoroutine(Reload());
-        }
 
     }
 
