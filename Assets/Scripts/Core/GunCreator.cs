@@ -7,6 +7,7 @@ public class GunCreator : MonoBehaviour
 
     private SpriteLoader spriteLoader;
 
+    [Header("ACCESSORIES SPRITE RENDERERS")]
     public SpriteRenderer body;
     public SpriteRenderer stock;
     public SpriteRenderer barrel;
@@ -31,26 +32,6 @@ public class GunCreator : MonoBehaviour
         mag.sprite =        spriteLoader.getRandomAccessory("Mag");
         aim.sprite =        spriteLoader.getRandomAccessory("Aim");
         handgrip.sprite =   spriteLoader.getRandomAccessory("Handgrip");
-
-        //// Accessories that could be not equipped on gun
-        //int randomMuzzle = Random.Range(0, _muzzles.Length + 1);
-        //if(randomMuzzle == _muzzles.Length)
-        //    muzzle.sprite = null;
-        //else
-        //    muzzle.sprite = _muzzles[randomMuzzle];
-
-        //int randomAim = Random.Range(0, _aims.Length + 1);
-        //if(randomAim  == _aims.Length)
-        //    aim.sprite = null;
-        //else
-        //    aim.sprite = _aims[randomAim];
-
-        //int randomHandgrip = Random.Range(0, _handgrips.Length + 1);
-        //if(randomHandgrip  == _handgrips.Length)
-        //    handgrip.sprite = null;
-        //else
-        //    handgrip.sprite = _handgrips[randomHandgrip];
-
     }
 
 }

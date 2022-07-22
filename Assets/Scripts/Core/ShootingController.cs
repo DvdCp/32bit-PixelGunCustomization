@@ -89,7 +89,7 @@ public class ShootingController : MonoBehaviour
             }
             else if (canClickAsDryGun)
             {
-                // *Click*
+                // *Click* ! Empty mag ...
                 source.PlayOneShot(dryGun);
                 canClickAsDryGun = false;
             }

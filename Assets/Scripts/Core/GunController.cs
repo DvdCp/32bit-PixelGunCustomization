@@ -29,7 +29,6 @@ public class GunController : MonoBehaviour
         {
             Vector2 _stickPosition = context.ReadValue<Vector2>();
         }
-
     }
 
     public void resetPosition()
@@ -37,5 +36,4 @@ public class GunController : MonoBehaviour
         transform.rotation = Quaternion.identity;
         transform.localScale = new Vector3(1, 1, 1);
     }
-
 }
