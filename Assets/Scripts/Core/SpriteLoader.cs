@@ -44,4 +44,20 @@ public class SpriteLoader : MonoBehaviour
     {
         return weaponAccessories[accessoryName];
     }
+
+    public Sprite getRandomAccessory(string name)
+    {
+     
+        // Get amount of sprite lists for accessory identified by name
+        var accessoryLists = weaponAccessories[name];
+
+        // Choose a random list
+        var index = Random.Range(0, accessoryLists.Count);
+        var randomList = accessoryLists[index];
+
+        // Choose a random variant in the random choosed list
+        var randomVariant = randomList[Random.Range(0, randomList.Length)];
+
+        return randomVariant;
+    }
 }

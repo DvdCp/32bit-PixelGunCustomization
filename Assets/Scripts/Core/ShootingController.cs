@@ -13,7 +13,17 @@ public class ShootingController : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private AnimationClip[] clips;
-    private float reloadTime;
+    private int reloadTime;
+
+    // Rounds per mag can be changed when a different mag is equipped
+    private int roundsPerMag = 30;
+    public int RoundsPerMag { get => roundsPerMag; set => roundsPerMag = value; }
+    private int remainingRounds;
+
+    private float nextTimeToShoot = 0f;
+    private bool isHoldingTrigger = false;
+    private bool canClickAsDryGun = true;   // Initially can click as dry gun
+    private bool isReloading = false;
 
     private AudioSource[] gunAudios;
     private AudioSource source;
@@ -31,19 +41,8 @@ public class ShootingController : MonoBehaviour
                 actualShotSound = value;
               else
                 actualShotSound = normalGunShot;
-            }
-            
+            }         
     }
-
-    // Rounds per mag can be changed when a different mag is equipped
-    private int roundsPerMag = 30;
-    public int RoundsPerMag { get => roundsPerMag; set => roundsPerMag = value; }
-    private int remainingRounds;
-
-    private float nextTimeToShoot = 0f;
-    private bool isHoldingTrigger = false;
-    private bool canClickAsDryGun = true;   // Initially can click as dry gun
-    private bool isReloading = false;
 
     private void Awake()
     {
@@ -60,9 +59,12 @@ public class ShootingController : MonoBehaviour
         clips = _animator.runtimeAnimatorController.animationClips;
 
         // Selecting onle "reload" animation and get its duration
-        foreach(var clip in clips)
+        foreach (var clip in clips)
             if (clip.name == "reload")
-                reloadTime = clip.length;
+            {
+                reloadTime = (int)clip.length;
+                print(reloadTime);
+            }
 
         // Initializing rounds in mag
         remainingRounds = roundsPerMag;
@@ -71,7 +73,7 @@ public class ShootingController : MonoBehaviour
 
     private void Update()
     {
-        if (isHoldingTrigger && Time.time >= nextTimeToShoot)
+        if (isHoldingTrigger && Time.time >= nextTimeToShoot && !isReloading)
         {
             if (remainingRounds > 0)
             {
@@ -84,7 +86,6 @@ public class ShootingController : MonoBehaviour
                 Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
                 Instantiate(shell, shutter.transform.position, shutter.transform.rotation);
 
-                //nextTimeToShoot = Time.time + 1f / fireRateo;
             }
             else if (canClickAsDryGun)
             {
@@ -113,16 +114,12 @@ public class ShootingController : MonoBehaviour
             // Resetting *Click* when trigger is released
             canClickAsDryGun = true;
         }
-
-        
     }
 
     public void onReload(InputAction.CallbackContext context)
     {
-
         if (context.started && !isReloading)
             StartCoroutine(Reload());
-
     }
 
     private IEnumerator Reload()
@@ -139,5 +136,4 @@ public class ShootingController : MonoBehaviour
 
         isReloading = false;
     }
-
 }
